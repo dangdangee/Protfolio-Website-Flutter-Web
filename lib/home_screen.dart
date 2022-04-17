@@ -5,21 +5,13 @@ import 'package:web_app/sections/mainSection/main_section.dart';
 import 'package:web_app/sections/topSection/top_section.dart';
 import 'package:web_app/sections/roadmap/roadmap.dart';
 import 'package:web_app/sections/team/teamsection.dart';
+import 'package:web_app/Appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/Logo.png"),
-            ),
-          ),
-        ),
-      ),
+      appBar: WackoAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
