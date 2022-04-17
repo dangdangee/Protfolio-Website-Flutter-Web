@@ -17,42 +17,32 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
-      constraints: BoxConstraints(maxWidth: 1110),
-      height: 100,
-      child: Row(
+      // constraints: BoxConstraints(maxWidth: 1110),
+      // height: 100,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            margin: EdgeInsets.only(right: kDefaultPadding),
-            padding: EdgeInsets.only(bottom: 72),
-            width: 8,
-            height: 100,
-            color: Colors.black,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: color,
-              ),
-            ),
+          Text(
+            title,
+            style: Theme.of(context)
+                .textTheme
+                .headline2
+                .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                subTitle,
-                style:
-                    TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
-              ),
-              Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
-              )
-            ],
-          )
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            subTitle,
+            style:
+            TextStyle(
+                fontWeight: FontWeight.w400,
+                color: kTextColor,
+                fontSize: 20),
+          ),
         ],
-      ),
+      )
     );
   }
 }

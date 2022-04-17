@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/section_title.dart';
 
-class ServiceSection extends StatelessWidget {
+class RoadmapSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,38 +33,35 @@ class ServiceSection extends StatelessWidget {
         bottom: 15,
         end: 0,
       ),
-      child: Wrap(
-        alignment: WrapAlignment.spaceEvenly,
-        runAlignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        direction: Axis.horizontal,
+      child: Column(
+        // alignment: WrapAlignment.spaceEvenly,
+        // runAlignment: WrapAlignment.center,
+        // crossAxisAlignment: WrapCrossAlignment.center,
+        // direction: Axis.horizontal,
         children: [
           Container(
-            width: (size.width<1000) ? size.width*0.85 : size.width*0.55,
+            width:size.width*0.9,
             // constraints: BoxConstraints(maxWidth: 800),
-            child: Column(
-              children: [
-                SectionTitle(
-                  // color: Color(0xFFFF0000),
-                  title: "Welcome To The Wacko University",
-                  subTitle: "\n Wacko University is a collection of 5000 Wacko NFTs-unique collectibles based on Solana. "
-                      "Wackos usually have wacky eyes which shows the value we prefer. "
-                      "We are seeking weird but chilling, dope people who can give joy to the world.\n\n"
-                      "We want to gather Wackos around the world to build a cheery (possibly cheeky) community.",
-                ),
-              ],
+            child: Text(
+              "Roadmap",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 70,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
+          SizedBox(height: 20),
           Container(
             // padding: EdgeInsets.all(10),
             height: 400,
-            width: 400,
+            width: size.width*0.9,
             alignment: Alignment.center,
             // constraints: BoxConstraints(maxWidth: 400),
             decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/images/nft1.png"),
+                fit: BoxFit.fitWidth,
+                image: AssetImage("assets/images/banner.png"),
               ),
             ),
           ),

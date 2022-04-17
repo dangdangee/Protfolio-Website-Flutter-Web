@@ -16,15 +16,20 @@ class MyOutlineButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
-      child: OutlineButton(
-        padding: EdgeInsets.symmetric(
-          vertical: kDefaultPadding,
-          horizontal: kDefaultPadding * 2.5,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.resolveWith((states) {
+
+            return EdgeInsets.all(10);
+          },),
+          backgroundColor: MaterialStateProperty.resolveWith((states){
+            if (states.contains(MaterialState.pressed)) {
+              return Colors.blue;
+            }
+            return Colors.lightBlue;
+          },
+          ),
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
-        ),
-        borderSide: BorderSide(color: Color(0xFFEDEDED)),
         onPressed: press,
         child: Row(
           children: [
