@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/gallery.dart';
-import 'package:web_app/artwork.dart';
 
-class WackoAppBar extends StatefulWidget implements PreferredSizeWidget {
-  WackoAppBar({Key key}) : preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
+class ArtReturnAppBar extends StatefulWidget implements PreferredSizeWidget {
+  ArtReturnAppBar({Key key}) : preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
 
   @override
   final Size preferredSize; // default is 56.0
@@ -12,15 +10,23 @@ class WackoAppBar extends StatefulWidget implements PreferredSizeWidget {
   _CustomAppBarState createState() => _CustomAppBarState();
 }
 
-class _CustomAppBarState extends State<WackoAppBar>{
+class _CustomAppBarState extends State<ArtReturnAppBar>{
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return AppBar(
-      leadingWidth: 350,
+      leadingWidth: 130,
       backgroundColor: Colors.white,
-      // bottom:
+      title: Text(
+        "Artwork",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      centerTitle: true,
       actions: [
         IconButton(
           onPressed: ()=>{print('opensea')},
@@ -63,45 +69,11 @@ class _CustomAppBarState extends State<WackoAppBar>{
             width: 70,
             height: 50,
             child: TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pop(context);
+              },
               child: Text(
                 "Home",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20
-                ),
-              ),
-            ),
-          ),
-          SizedBox(width: 10,),
-          Container(
-            width: 100,
-            height: 50,
-            child: TextButton(
-              onPressed: () {Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Gallery()),
-              );},
-              child: Text(
-                "Gallery",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20
-                ),
-              ),
-            ),
-          ),
-          SizedBox(width: 10,),
-          Container(
-            width: 100,
-            height: 50,
-            child: TextButton(
-              onPressed: () {Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Artwork()),
-              );},
-              child: Text(
-                "Artwork",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20

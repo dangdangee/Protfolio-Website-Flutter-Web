@@ -76,7 +76,7 @@ class TeamSection extends StatelessWidget {
                     height: 30,
                     width: size.width*0.3-10,
                     child: Text(
-                      "Sohee Kim",
+                      "Sohee",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 25,
