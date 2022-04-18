@@ -13,19 +13,22 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: WackoAppBar(),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopSection(),
-            SizedBox(height: kDefaultPadding * 2),
-            IntroSection(),
-            SizedBox(height: kDefaultPadding * 2),
-            MainSection(),
-            SizedBox(height: kDefaultPadding * 2),
-            RoadmapSection(),
-            SizedBox(height: kDefaultPadding * 2),
-            TeamSection(),
-            SizedBox(height: kDefaultPadding * 3),
-          ],
+        child: Container(
+          color: Color(0xffadefd1),
+          child: Column(
+            children: [
+              TopSection(),
+              SizedBox(height: kDefaultPadding * 2),
+              IntroSection(),
+              SizedBox(height: kDefaultPadding * 2),
+              MainSection(),
+              SizedBox(height: kDefaultPadding * 2),
+              RoadmapSection(),
+              SizedBox(height: kDefaultPadding * 2),
+              TeamSection(),
+              SizedBox(height: kDefaultPadding * 3),
+            ],
+          ),
         ),
       ),
     );

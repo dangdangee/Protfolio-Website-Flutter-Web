@@ -67,6 +67,7 @@ class _CustomAppBarState extends State<WackoAppBar>{
               child: Text(
                 "Home",
                 style: TextStyle(
+                  fontFamily: 'Highschool',
                   color: Colors.black,
                   fontSize: 20
                 ),
@@ -85,6 +86,7 @@ class _CustomAppBarState extends State<WackoAppBar>{
               child: Text(
                 "Gallery",
                 style: TextStyle(
+                    fontFamily: 'Highschool',
                     color: Colors.black,
                     fontSize: 20
                 ),
@@ -103,6 +105,7 @@ class _CustomAppBarState extends State<WackoAppBar>{
               child: Text(
                 "Artwork",
                 style: TextStyle(
+                    fontFamily: 'Highschool',
                     color: Colors.black,
                     fontSize: 20
                 ),

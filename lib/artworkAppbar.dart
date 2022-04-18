@@ -19,11 +19,12 @@ class _CustomAppBarState extends State<ArtReturnAppBar>{
       leadingWidth: 130,
       backgroundColor: Colors.white,
       title: Text(
-        "Artwork",
+        "ARTWORK",
         style: TextStyle(
+          fontFamily: 'College',
           color: Colors.black,
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
+          fontSize: 40,
+          // fontWeight: FontWeight.bold,
         ),
       ),
       centerTitle: true,
@@ -75,6 +76,7 @@ class _CustomAppBarState extends State<ArtReturnAppBar>{
               child: Text(
                 "Home",
                 style: TextStyle(
+                    fontFamily: 'Highschool',
                     color: Colors.black,
                     fontSize: 20
                 ),

@@ -28,7 +28,7 @@ class SectionTitle extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headline2
-                .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+                .copyWith(color: Colors.black, fontFamily: 'Highschool',),
           ),
           SizedBox(
             height: 10,
@@ -37,6 +37,7 @@ class SectionTitle extends StatelessWidget {
             subTitle,
             style:
             TextStyle(
+              fontFamily: 'Highschool',
                 fontWeight: FontWeight.w400,
                 color: kTextColor,
                 fontSize: 20),

@@ -7,7 +7,7 @@ class RoadmapSection extends StatelessWidget {
     return Container(
       width: size.width*0.95,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xff00203f),
         border: Border(
           top: BorderSide(
             width: 3,
@@ -43,11 +43,13 @@ class RoadmapSection extends StatelessWidget {
             width:size.width*0.9,
             // constraints: BoxConstraints(maxWidth: 800),
             child: Text(
-              "Roadmap",
+              "ROADMAP",
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontFamily: 'College',
                 fontSize: 70,
-                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                // fontWeight: FontWeight.bold,
               ),
             ),
           ),

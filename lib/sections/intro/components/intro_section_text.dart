@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class AboutSectionText extends StatelessWidget {
-  const AboutSectionText({
+class IntroSectionText extends StatelessWidget {
+  const IntroSectionText({
     Key key,
     this.text,
   }) : super(key: key);
@@ -18,10 +18,10 @@ class AboutSectionText extends StatelessWidget {
         text,
         textAlign: TextAlign.center,
         style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
-            color: Colors.black,
-            height: 5),
+          fontFamily: 'Random',
+          fontSize: 45,
+          color: Colors.black,
+        ),
       ),
     );
   }

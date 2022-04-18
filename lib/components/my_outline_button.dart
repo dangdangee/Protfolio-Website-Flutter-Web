@@ -19,14 +19,13 @@ class MyOutlineButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           padding: MaterialStateProperty.resolveWith((states) {
-
             return EdgeInsets.all(10);
           },),
           backgroundColor: MaterialStateProperty.resolveWith((states){
             if (states.contains(MaterialState.pressed)) {
-              return Colors.blue;
+              return Color(0xee0a1742);
             }
-            return Colors.lightBlue;
+            return Color(0xff0a1742);
           },
           ),
         ),
@@ -38,7 +37,13 @@ class MyOutlineButton extends StatelessWidget {
               height: 40,
             ),
             SizedBox(width: kDefaultPadding),
-            Text(text)
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 25,
+                fontFamily: 'Sandwich',
+              ),
+            )
           ],
         ),
       ),

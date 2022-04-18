@@ -10,7 +10,7 @@ class IntroSection extends StatelessWidget {
     return Container(
       width: size.width*0.95,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xfff5d042),
         border: Border(
           top: BorderSide(
             width: 3,
@@ -39,9 +39,9 @@ class IntroSection extends StatelessWidget {
             children: [
               // AboutTextWithSign(),
               Expanded(
-                child: AboutSectionText(
+                child: IntroSectionText(
                   text:
-                      "A collection of 5000 NFTs for Wackos around the world"
+                      "A collection of 5000 NFTs for Wackos around the world",
                 ),
               ),
             ],

@@ -7,7 +7,7 @@ class TeamSection extends StatelessWidget {
     return Container(
       width: size.width*0.95,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xfffcf2f1),
         border: Border(
           top: BorderSide(
             width: 3,
@@ -43,11 +43,12 @@ class TeamSection extends StatelessWidget {
             width:size.width*0.9,
             // constraints: BoxConstraints(maxWidth: 800),
             child: Text(
-              "Team",
+              "TEAM",
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontFamily: 'College',
                 fontSize: 70,
-                fontWeight: FontWeight.bold,
+                // fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -79,6 +80,7 @@ class TeamSection extends StatelessWidget {
                       "Sohee",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 25,
                       ),
                     ),
@@ -91,6 +93,7 @@ class TeamSection extends StatelessWidget {
                       "Artist",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 15,
                       ),
                     ),
@@ -121,6 +124,7 @@ class TeamSection extends StatelessWidget {
                       "Sungtae Lee",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 25,
                       ),
                     ),
@@ -133,6 +137,7 @@ class TeamSection extends StatelessWidget {
                       "Tech",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 15,
                       ),
                     ),
@@ -160,9 +165,10 @@ class TeamSection extends StatelessWidget {
                     height: 30,
                     width: size.width*0.3-10,
                     child: Text(
-                      "Geonyoung Kim",
+                      "Gin",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 25,
                       ),
                     ),
@@ -175,6 +181,7 @@ class TeamSection extends StatelessWidget {
                       "Community",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Highschool',
                         fontSize: 15,
                       ),
                     ),
