@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_app/gallery.dart';
 import 'package:web_app/artwork.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WackoAppBar extends StatefulWidget implements PreferredSizeWidget {
   WackoAppBar({Key key}) : preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
@@ -23,21 +24,45 @@ class _CustomAppBarState extends State<WackoAppBar>{
       // bottom:
       actions: [
         IconButton(
-          onPressed: ()=>{print('opensea')},
+          onPressed: () async {
+            const url = 'https://opensea.io/WackoUniversity';
+            if (await canLaunch(url)){
+              await launch(url);
+            } else{
+              throw 'Could not launch';
+            }
+            // print(size.width);
+          },
           icon: Image.asset(
             "assets/images/opensea_logo.png",
             fit: BoxFit.fill,
           ),
         ),
         IconButton(
-          onPressed: ()=>{print('twitter')},
+          onPressed: () async {
+            const url = 'https://twitter.com/WackoUniv_NFT';
+            if (await canLaunch(url)){
+              await launch(url);
+            } else{
+              throw 'Could not launch';
+            }
+            // print(size.width);
+          },
           icon: Image.asset(
             "assets/images/twitter_logo.png",
             fit: BoxFit.fill,
           ),
         ),
         IconButton(
-          onPressed: ()=>{print('instagram')},
+          onPressed: () async {
+            const url = 'https://instagram.com/wackounivnft/';
+            if (await canLaunch(url)){
+              await launch(url);
+            } else{
+              throw 'Could not launch';
+            }
+            // print(size.width);
+          },
           icon: Image.asset(
             "assets/images/insta_logo.png",
             fit: BoxFit.fill,
@@ -46,8 +71,8 @@ class _CustomAppBarState extends State<WackoAppBar>{
       ],
       leading: Wrap(
         direction: Axis.horizontal,
+        runAlignment: WrapAlignment.center,
         crossAxisAlignment: WrapCrossAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 50,

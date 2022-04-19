@@ -53,6 +53,7 @@ class _CustomAppBarState extends State<ArtReturnAppBar>{
       ],
       leading: Wrap(
         direction: Axis.horizontal,
+        runAlignment: WrapAlignment.center,
         crossAxisAlignment: WrapCrossAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [

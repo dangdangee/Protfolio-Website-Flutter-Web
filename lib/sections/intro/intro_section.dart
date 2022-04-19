@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:web_app/components/my_outline_button.dart';
 import 'package:web_app/constants.dart';
 import 'components/intro_section_text.dart';
@@ -52,9 +53,15 @@ class IntroSection extends StatelessWidget {
             children: [
               MyOutlineButton(
                 imageSrc: "assets/images/opensea_logo.png",
-                text: "Be Wacko on OPENSEA",
-                press: () {
-                  print(size.width);
+                text: "Be Wacky on OPENSEA",
+                press: () async {
+                  const url = 'https://opensea.io/WackoUniversity';
+                  if (await canLaunch(url)){
+                    await launch(url);
+                  } else{
+                    throw 'Could not launch';
+                  }
+                  // print(size.width);
                 },
               ),
             ],

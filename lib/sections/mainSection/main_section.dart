@@ -48,7 +48,7 @@ class MainSection extends StatelessWidget {
                 SectionTitle(
                   // color: Color(0xFFFF0000),
                   title: "Welcome To The Wacko University",
-                  subTitle: "\n Wacko University is a collection of 5000 Wacko NFTs-unique collectibles based on Solana. "
+                  subTitle: "\nWacko University is a collection of 5000 Wacko NFTs-unique collectibles based on Solana. "
                       "Wackos usually have wacky eyes which shows the value we prefer. "
                       "We are seeking weird but chilling, dope people who can give joy to the world.\n\n"
                       "We want to gather Wackos around the world to build a cheery (possibly cheeky) community.",
@@ -65,7 +65,7 @@ class MainSection extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage("assets/images/nft1.png"),
+                image: AssetImage("assets/images/WanChu.png"),
               ),
             ),
           ),

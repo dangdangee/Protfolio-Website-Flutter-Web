@@ -121,7 +121,7 @@ class TeamSection extends StatelessWidget {
                     height: 30,
                     width: size.width*0.3-10,
                     child: Text(
-                      "Sungtae Lee",
+                      "Kiwi",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Highschool',
