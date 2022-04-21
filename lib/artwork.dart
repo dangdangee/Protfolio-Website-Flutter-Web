@@ -10,6 +10,7 @@ class Artwork extends StatefulWidget {
 
 class _ArtworkState extends State<Artwork> with ChangeNotifier {
   ScrollController? controller;
+  double print_items = 25;
 
   @override
   void initState() {
@@ -22,12 +23,11 @@ class _ArtworkState extends State<Artwork> with ChangeNotifier {
     super.dispose();
   }
 
-  double print_items = 25;
   Future<void> _onScrollUpdated() async {
     var maxScroll = controller!.position.maxScrollExtent;
     var currentPosition = controller!.position.pixels;
     if (currentPosition == maxScroll) {
-      print_items += 15;
+      setState((){print_items += 15;});
     }
   }
 
