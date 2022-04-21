@@ -3,7 +3,33 @@ import 'package:web_app/galleryAppbar.dart';
 import 'utils.dart';
 import 'dart:math';
 
-class Gallery extends StatelessWidget {
+class Gallery extends StatefulWidget {
+  @override
+  _GalleryState createState() => _GalleryState();
+}
+
+class _GalleryState extends State<Gallery> with ChangeNotifier {
+  ScrollController? controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = ScrollController()..addListener(_onScrollUpdated);
+  }
+
+  void dispose() {
+    controller!.dispose();
+    super.dispose();
+  }
+
+  double print_items = 25;
+  Future<void> _onScrollUpdated() async {
+    var maxScroll = controller!.position.maxScrollExtent;
+    var currentPosition = controller!.position.pixels;
+    if (currentPosition == maxScroll) {
+      print_items += 15;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +54,7 @@ class Gallery extends StatelessWidget {
 
         else {
           Map<String, String> file2url = snapshot.data! as Map<String, String>;
-          var total_items = file2url.keys.length;
+          var total_items = file2url.keys.length.toDouble();
           const num_items = 5;
 
           var padding_size = media_width / 2 / pow(num_items + 1,2);
@@ -48,8 +74,9 @@ class Gallery extends StatelessWidget {
                 child: Column(
                   children: [
                     Expanded(child: ListView.builder(
+                      controller: controller,
                       shrinkWrap: true,
-                      itemCount: (total_items/num_items).ceil(),
+                      itemCount: ([print_items,total_items].reduce(min)/num_items).ceil(),
                       itemBuilder: (context, index) {
                         return Row(
                           children: [
@@ -60,15 +87,15 @@ class Gallery extends StatelessWidget {
                                 child:ListView.builder(
                                   scrollDirection: Axis.horizontal,
                                   shrinkWrap: true,
-                                  itemCount: num_items, //((total_items / num_items).ceil() == (index+1))? (total_items%num_items):num_items,
+                                  itemCount: num_items,
                                   itemBuilder: (context, remainder) {
                                     return Padding(
                                       padding: EdgeInsets.all(padding_size),
                                       child:
-                                      (((total_items/num_items).ceil() == (index+1))&&(remainder>=(total_items%num_items)))?
-                                      Container(width:media_width / (num_items + 1) + padding_size*2,
-                                        height:media_width / (num_items + 1) + padding_size*2, child:SizedBox())
-                                      :Image.network(file2url[(index * num_items + remainder).toString()]!) // index, remainder
+                                      ((([print_items,total_items].reduce(min)/num_items).ceil() == (index+1))&&(remainder>=([print_items,total_items].reduce(min)%num_items))&&([print_items,total_items].reduce(min)%num_items!=0))?
+                                      Container(width:media_width / (num_items + 1),
+                                        height:media_width / (num_items + 1), child:SizedBox())
+                                      :Image.network(file2url[file2url.keys.elementAt((index * num_items + remainder))]!) // index, remainder
                                     );
                                   }
                                 )
