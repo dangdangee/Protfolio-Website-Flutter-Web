@@ -4,14 +4,13 @@ import '../constants.dart';
 
 class MyOutlineButton extends StatelessWidget {
   const MyOutlineButton({
-    Key key,
-    this.imageSrc,
-    this.text,
-    this.press,
-  }) : super(key: key);
+    required this.imageSrc,
+    required this.text,
+    required this.press,
+  });
 
   final String imageSrc, text;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {

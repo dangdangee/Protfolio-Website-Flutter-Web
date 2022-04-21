@@ -4,9 +4,8 @@ import '../../../constants.dart';
 
 class IntroSectionText extends StatelessWidget {
   const IntroSectionText({
-    Key key,
-    this.text,
-  }) : super(key: key);
+    required this.text,
+  });
 
   final String text;
 

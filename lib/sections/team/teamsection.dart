@@ -68,7 +68,7 @@ class TeamSection extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("assets/images/nft1.png"),
+                        image: AssetImage("assets/images/Sohee.png"),
                       ),
                     ),
                   ),
@@ -112,7 +112,7 @@ class TeamSection extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("assets/images/nft1.png"),
+                        image: AssetImage("assets/images/Kiwi.png"),
                       ),
                     ),
                   ),
@@ -156,7 +156,7 @@ class TeamSection extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("assets/images/nft1.png"),
+                        image: AssetImage("assets/images/Gun.png"),
                       ),
                     ),
                   ),
@@ -165,7 +165,7 @@ class TeamSection extends StatelessWidget {
                     height: 30,
                     width: size.width*0.3-10,
                     child: Text(
-                      "Gin",
+                      "Gun",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Highschool',

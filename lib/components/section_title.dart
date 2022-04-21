@@ -3,15 +3,12 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class SectionTitle extends StatelessWidget {
-  const SectionTitle({
-    Key key,
-    this.title,
-    this.subTitle,
-    this.color,
-  }) : super(key: key);
+  SectionTitle({
+    required this.title,
+    required this.subTitle,
+  });
 
   final String title, subTitle;
-  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class SectionTitle extends StatelessWidget {
             title,
             style: Theme.of(context)
                 .textTheme
-                .headline2
+                .headline2!
                 .copyWith(color: Colors.black, fontFamily: 'Highschool',),
           ),
           SizedBox(

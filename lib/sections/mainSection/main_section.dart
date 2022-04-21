@@ -48,10 +48,12 @@ class MainSection extends StatelessWidget {
                 SectionTitle(
                   // color: Color(0xFFFF0000),
                   title: "Welcome To The Wacko University",
-                  subTitle: "\nWacko University is a collection of 5000 Wacko NFTs-unique collectibles based on Solana. "
+                  subTitle: "\nWacko University is Art-based collections of 5000 characters, 500 artworks, 50 clips, 5 movies based on Polygon. "
                       "Wackos usually have wacky eyes which shows the value we prefer. "
-                      "We are seeking weird but chilling, dope people who can give joy to the world.\n\n"
-                      "We want to gather Wackos around the world to build a cheery (possibly cheeky) community.",
+                      "We are seeking weird but chilling, dope people who can give joy to the world!\n\n"
+                      "We want to gather Wackos around the world to build a cheery (possibly cheeky) community. "
+                      "Holders of Wacko Characters will get an early access to the 500 artwork Collections!\n\nWho wants to be WACKY???\n\n"
+                      "Character Minting price\n - 1-1000: 0.005 MATIC\n - 1001-2000: 0.01 MATIC\n - 2001-3000: 0.02 MATIC\n - 3001-4000: 0.04 MATIC\n - 4001-5000: 0.08 MATIC"
                 ),
               ],
             ),

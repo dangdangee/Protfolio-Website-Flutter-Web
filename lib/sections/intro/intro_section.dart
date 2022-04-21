@@ -42,7 +42,7 @@ class IntroSection extends StatelessWidget {
               Expanded(
                 child: IntroSectionText(
                   text:
-                      "A collection of 5000 NFTs for Wackos around the world",
+                      "A collection of 5555 NFTs for Wackos around the world",
                 ),
               ),
             ],

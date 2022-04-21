@@ -56,14 +56,14 @@ class RoadmapSection extends StatelessWidget {
           SizedBox(height: 20),
           Container(
             // padding: EdgeInsets.all(10),
-            height: 400,
+            height: size.width*0.45,
             width: size.width*0.9,
             alignment: Alignment.center,
             // constraints: BoxConstraints(maxWidth: 400),
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fitWidth,
-                image: AssetImage("assets/images/banner.png"),
+                image: AssetImage("assets/images/Roadmap.png"),
               ),
             ),
           ),
